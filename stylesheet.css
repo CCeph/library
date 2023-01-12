@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.footer,
+.top-panel {
+    background-color: black;
+    color: white;
+}
+
+.main-container {
+    display: grid;
+    height: 100vh;
+    grid-template: 1.5fr 9fr 50px / 1fr;
+}
