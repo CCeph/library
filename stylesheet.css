@@ -16,6 +16,10 @@ body {
     align-items: center;
 }
 
+.main-panel {
+    margin: auto;
+}
+
 .main-container {
     display: grid;
     height: 100vh;
