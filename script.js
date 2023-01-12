@@ -12,5 +12,6 @@ function Book(author, title, pagesNum, read) {
 //Function that uses user input to create a book object
 //and then add it to the myLibrary array.
 function addBookToLibrary(author, title, pagesNum, read) {
-    //Stuff
+    let newBook = new Book(author, title, pagesNum, read);
+    myLibrary.push(newBook);
 }
