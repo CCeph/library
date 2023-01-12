@@ -2,12 +2,15 @@
 let myLibrary = []
 
 //Constructor for book objects.
-function Book() {
-    //Stuff
+function Book(author, title, pagesNum, read) {
+    this.author = author;
+    this.title = title;
+    this.pagesNum = pagesNum;
+    this.read = read;
 }
 
-//Function that uses user input to create a book object and then add it to
-//the myLibrary array.
-function addBookToLibrary() {
+//Function that uses user input to create a book object
+//and then add it to the myLibrary array.
+function addBookToLibrary(author, title, pagesNum, read) {
     //Stuff
 }
