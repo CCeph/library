@@ -45,7 +45,7 @@ body {
     border: grey 2px solid;
 }
 
-/*Styling when the popup is active*/
+/*Styling when the popup is inactive*/
 .bookPopup {
     position: absolute;
     top: -150%;
@@ -64,7 +64,7 @@ body {
                 transform 20ms ease-in-out 0ms;
 }
 
-/*Styling when the popup is inactive*/
+/*Styling when the popup is active*/
 .bookPopup.active {
     top: 50%;
     opacity: 1;
