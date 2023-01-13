@@ -15,7 +15,30 @@
         </div>
 
         <div class="main-panel">
-            <button type="button" class="addBook">Add Book</button>
+            <button type="button" class="addBook">&plus;</button>
+
+            <div class="bookPopup">
+                <button type="button" class="close-btn">&times;</button>
+                <form action="" method="post" autocomplete="off">
+                    <h2>Add a Book</h2>
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" placeholder="Book's Author">
+
+                    <label for="title">Title: </label>
+                    <input type="text" id="title" placeholder="Book Title">
+
+                    <label for="pagesNum">Number of Pages: </label>
+                    <input type="text" id="pagesNum" placeholder="Enter a Number">
+
+                    <label for="read">Have you read the book?</label>
+                    <div class="checkboxGrid">
+                        <label for="true" class="trueLabel">Yes</label> <input type="radio" class="checkbox" name="read" id="true">
+                        <label for="false" class="falseLabel">No</label> <input type="radio" class="checkbox" name="read" id="false">
+                    </div>
+
+                    <button>Submit</button>
+                </form>
+            </div>
         </div>
 
         <div class="footer">

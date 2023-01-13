@@ -6,6 +6,21 @@ body {
     margin: 0;
 }
 
+/* Start of Grid Layout */
+.main-container {
+    display: grid;
+    height: 100vh;
+    grid-template: 1.5fr 9fr 50px / 1fr;
+}
+
+.main-panel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* End of Grid Layout */
+
 /* Common styling between the header and footer */
 .top-panel,
 .footer {
@@ -16,12 +31,117 @@ body {
     align-items: center;
 }
 
-.main-panel {
-    margin: auto;
+/* Start of styling for adding a book */
+
+.addBook {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0;
+    border: grey 2px solid;
 }
 
-.main-container {
-    display: grid;
-    height: 100vh;
-    grid-template: 1.5fr 9fr 50px / 1fr;
+/*Styling when the popup is active*/
+.bookPopup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    box-shadow:2px 3px 5px 2px #999;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    
+    opacity: 0;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
 }
+
+/*.bookPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    box-shadow:2px 3px 5px 2px #999;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    
+    opacity: 1;
+}*/
+
+/*Styling when the popup is inactive*/
+.bookPopup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.bookPopup :is(label, input) {
+    display: block;
+    padding: 0;
+    margin-top: 8px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bookPopup .checkboxGrid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+.checkboxGrid .falseLabel {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.checkboxGrid label {
+    text-align: center;
+}
+
+form button {
+    display: block;
+    margin: auto;
+    margin-top: 8px;
+    padding: 1px, 3px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .9rem;
+}
+.bookPopup input {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1px 3px;
+    font-size: 1rem;
+}
+
+
+/* Styling and position for the button to close the popup */
+.bookPopup .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgba(128, 128, 128, 0);
+}
+
+.bookPopup h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* End of styling for adding a book */
