@@ -79,11 +79,28 @@ function displayBooks() {
     container = document.querySelector(".bookContainer");
     //Erases the container before redisplaying all the books.
     container.innerHTML = "";
+    let counter = 0
 
     for (book of myLibrary) {
+        counter += 1
         let newCard = document.createElement('div');
         container.appendChild(newCard);
+        newCard.classList.add("book")
+        newCard.innerHTML = `<h2 class="title${counter}"></h2>
+        <p class="cardAuthor${counter}"></p>
+        <p class="cardPage${counter}"></p>
+        <p class="readStatus readStatus${counter}"></p>
+        <button class="delete">Remove Book</button>`
+        document.querySelector(`.book .title${counter}`).textContent = `${book.title}`
+        document.querySelector(`.book .cardAuthor${counter}`).textContent = `Written by ${book.author}.`
+        document.querySelector(`.book .cardPage${counter}`).textContent = `${book.pagesNum} pages.`
+        if (book.read === 'true') {
+            document.querySelector(`.book .readStatus${counter}`).textContent = `Read`;
+        } else if (book.read === 'false') {
+            document.querySelector(`.book .readStatus${counter}`).textContent = `Not read`;
+        }
     }
+    console.log(myLibrary);
 }
 
 main();
