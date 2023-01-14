@@ -26,8 +26,41 @@ body {
 
 /* End of Grid Layout */
 
-/* Common styling between the header and footer */
-.top-panel,
+/* Start of Header Styling */
+
+.top-panel {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-content: space-around;
+    grid-gap: 60%;
+}
+
+.top-panel h1 {
+    text-align: center;
+    align-self: center;
+
+    font-size: 2.2rem;
+}
+
+.top-panel button {
+    justify-self: center;
+    align-self: center;
+
+    font-size: 1.5rem;
+    font-family: Roboto;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.top-panel button:active {
+    box-shadow: 1px 1px 10px grey;
+}
+
+/* End of Header Styling */
+
+/* Footer styling */
 .footer {
     background-color: black;
     color: white;
