@@ -25,7 +25,9 @@ function addBookToLibrary(formAnswers) {
 //Function adds interactivity to "addBook" button.
 function addBookButton() {
     button = document.querySelector(".addBook");
+    secondButton = document.querySelector(".secondBookBtn")
     button.addEventListener("click", showForm);
+    secondButton.addEventListener("click", showForm);
 }
 
 //This function activates when a button is pressed to add
