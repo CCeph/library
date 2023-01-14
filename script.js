@@ -69,7 +69,21 @@ function submitForm() {
         }
         
         addBookToLibrary(formAnswers);
+        displayBooks();
     })
+}
+
+//This function iterates over the myLibrary array and displays all
+//book objects on the webpage.
+function displayBooks() {
+    container = document.querySelector(".bookContainer");
+    //Erases the container before redisplaying all the books.
+    container.innerHTML = "";
+
+    for (book of myLibrary) {
+        let newCard = document.createElement('div');
+        container.appendChild(newCard);
+    }
 }
 
 main();
