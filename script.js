@@ -80,6 +80,7 @@ function submitForm() {
             formAnswers.push(item[1])
         }
         
+        //Hides the center addBook button only after the first entry.
         if (myLibrary.length === 0) {
             hideAddButton();
         }
