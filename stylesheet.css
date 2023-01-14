@@ -176,4 +176,12 @@ form button {
     border-radius: 5px;
 }
 
+/* Styling the grid layout for the cards */
+
+.bookContainer {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+}
+
 /* End of styling for book cards */
