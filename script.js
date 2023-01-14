@@ -102,7 +102,6 @@ function displayBooks() {
             document.querySelector(`.book .readStatus${counter}`).textContent = `Not read`;
         }
     }
-    console.log(myLibrary);
 }
 
 main();
