@@ -85,6 +85,8 @@ function submitForm() {
             hideAddButton();
         }
         addBookToLibrary(formAnswers);
+        hideForm();
+        form.reset();
         displayBooks();
     })
 }
