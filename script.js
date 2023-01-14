@@ -52,6 +52,16 @@ function hideForm() {
         popup.classList.remove("active")
 }
 
+function hideAddButton() {
+    button = document.querySelector(".main-panel .addBook")
+    button.classList.remove("active")
+}
+
+function showAddButton() {
+    button = document.querySelector(".main-panel .addBook")
+    button.classList.add("active")
+}
+
 //This function handles the form submission of a new book.
 //The data is passed to and stored in the array of books.
 function submitForm() {
@@ -70,6 +80,9 @@ function submitForm() {
             formAnswers.push(item[1])
         }
         
+        if (myLibrary.length === 0) {
+            hideAddButton();
+        }
         addBookToLibrary(formAnswers);
         displayBooks();
     })

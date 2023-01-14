@@ -73,14 +73,20 @@ body {
 
 .addBook {
     position: absolute;
-    top: 50%;
+    top: -150%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 
     font-size: 20px;
     border-radius: 10px;
     box-shadow: 0;
     border: grey 2px solid;
+}
+
+.addBook.active {
+    top: 50%;
+    opacity: 1;
 }
 
 .addBook:active {
