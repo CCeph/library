@@ -225,6 +225,7 @@ form button {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
 }
 
 /* End of styling for book cards */
