@@ -28,17 +28,17 @@
                 <form action="" method="post" autocomplete="off">
                     <h2>Add a Book</h2>
                     <label for="author">Author: </label>
-                    <input type="text" name="author" id="author" placeholder="Book's Author">
+                    <input type="text" name="author" id="author" placeholder="Book's Author" required>
 
                     <label for="title">Title: </label>
-                    <input type="text" name="title" id="title" placeholder="Book Title">
+                    <input type="text" name="title" id="title" placeholder="Book Title" required>
 
                     <label for="pagesNum">Number of Pages: </label>
-                    <input type="text" name="pagesNum" id="pagesNum" placeholder="Enter a Number">
+                    <input type="tel" name="pagesNum" id="pagesNum" placeholder="Enter a Number" pattern="^\d+$" title="Only accepts numbers." required>
 
                     <label for="read">Have you read the book?</label>
                     <div class="checkboxGrid">
-                        <label for="true" class="trueLabel">Yes</label> <input type="radio" class="checkbox" name="read" id="true" value="true">
+                        <label for="true" class="trueLabel">Yes</label> <input type="radio" class="checkbox" name="read" id="true" value="true" required>
                         <label for="false" class="falseLabel">No</label> <input type="radio" class="checkbox" name="read" id="false" value="false">
                     </div>
 
