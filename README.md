@@ -1,7 +1,7 @@
 # library
 
 To-do list:
-    Improve the validation so that the code doesn't break if some fields are missing.
+    Improve form styling.
     Iterate over myLibrary array and display all books on the webpage.
     Hide the default "addBook" button when the first book is added.
     Add a new "addBook" button to the top panel. Shift "Library" title to the left.
