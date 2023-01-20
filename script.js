@@ -104,6 +104,7 @@ function displayBooks() {
         let newCard = document.createElement('div');
         container.appendChild(newCard);
         newCard.classList.add("book")
+        newCard.setAttribute('id', `book${counter}`);
         newCard.innerHTML = `<h2 class="title${counter}"></h2>
         <p class="cardAuthor${counter}"></p>
         <p class="cardPage${counter}"></p>
