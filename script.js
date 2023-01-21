@@ -5,6 +5,7 @@ function main() {
     submitForm();
     enableCloseBtn();
     addBookButton();
+    removeBookBtn();
 }
 
 //Constructor for book objects.
@@ -109,7 +110,7 @@ function displayBooks() {
         <p class="cardAuthor${counter}"></p>
         <p class="cardPage${counter}"></p>
         <p class="readStatus readStatus${counter}"></p>
-        <button class="delete">Remove Book</button>`
+        <button class="delete" id="remove${counter}">Remove Book</button>`
         document.querySelector(`.book .title${counter}`).textContent = `${book.title}`
         document.querySelector(`.book .cardAuthor${counter}`).textContent = `Written by ${book.author}.`
         document.querySelector(`.book .cardPage${counter}`).textContent = `${book.pagesNum} pages.`
@@ -118,6 +119,29 @@ function displayBooks() {
         } else if (book.read === 'false') {
             document.querySelector(`.book .readStatus${counter}`).textContent = `Not read`;
         }
+    }
+}
+
+function removeBookBtn() {
+    document.addEventListener('click', (e) => {
+        let element = e.target;
+        if (element.tagName == 'BUTTON' && element.classList.contains("delete")) {
+            let bookID = element.id.replace('remove', '');
+            removeBook(bookID);
+        }
+    });
+}
+
+function removeBook(bookID) {
+    let bookToDelete = document.getElementById(`book${bookID}`);
+    myLibrary.splice(bookID-1, 1);
+    bookToDelete.parentNode.removeChild(bookToDelete);
+    checkForEmptyLibrary();
+}
+
+function checkForEmptyLibrary() {
+    if (myLibrary.length === 0) {
+        showAddButton();
     }
 }
 
